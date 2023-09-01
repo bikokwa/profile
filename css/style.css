@@ -930,12 +930,37 @@ h5 {
   }
 }
 
+.item-link {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  z-index: 20;
+  display: block;
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: transparent var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: transparent var(--tw-gradient-to-position);
+}
+
+.group:hover .item-link {
+  cursor: pointer;
+  --tw-gradient-from: transparent var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: transparent var(--tw-gradient-to-position);
+  opacity: 0.5;
+}
+
 .item-gradient {
   position: absolute;
   top: 0px;
   bottom: 0px;
   right: 0px;
   left: 0px;
+  z-index: 10;
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
   --tw-gradient-from: transparent var(--tw-gradient-from-position);
   --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
@@ -948,7 +973,7 @@ h5 {
   --tw-gradient-to: rgb(249 250 251 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   --tw-gradient-to: #fff var(--tw-gradient-to-position);
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 #hero {
